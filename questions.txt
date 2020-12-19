@@ -1,0 +1,14 @@
+Tous les codes sont uniques (doublons ?)
+parser les catégories ?
+Individus trop nombreux pour être représentés sur le plan factoriel
+perdu dans l'acp
+
+
+
+
+Utilisation skewness / kurtosis / Gini / Moyenne harmonique
+Inertie et cercle de correlation pour l'ACP (on affiche pas les projections)
+
+https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html
+https://plotly.com/python/
+https://colab.research.google.com/notebooks/intro.ipynb#recent=true
