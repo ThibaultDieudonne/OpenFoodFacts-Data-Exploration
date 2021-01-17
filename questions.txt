@@ -1,14 +1,24 @@
-Tous les codes sont uniques (doublons ?)
-parser les catégories ?
-Individus trop nombreux pour être représentés sur le plan factoriel
-perdu dans l'acp
+Impact des nutriments sur le nutriscore pour ANOVA => la formule est documentée (sens ?)
 
+todo:
+Matrice de correlation bivariée avant ACP
+=> vérifier la normalisation des données avant ANOVA
+Justifier:
+  Les démarches de nettoyage
+  Les méthodes d'analyse
+  Les types de graphes
+Conditions:
+  1 graphe intéractif
+  3 types de graphes
 
-
-
+envisager:
+Chi-2 ?
+A part nutriscore, nutriments et catégories, quelles autres variables valent le coup ? (par exemple composition des emballages ?)
+=> PAYS, MARQUES en fonction du nutriscore.
 Utilisation skewness / kurtosis / Gini / Moyenne harmonique
-Inertie et cercle de correlation pour l'ACP (on affiche pas les projections)
+corrélation entre les éléments sains et les hautes teneurs en X par portion (pour trouver les aliments sains capable d'apporter une haute teneur d'un nutriment spécifique)
 
+docs:
 https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html
 https://plotly.com/python/
 https://colab.research.google.com/notebooks/intro.ipynb#recent=true
