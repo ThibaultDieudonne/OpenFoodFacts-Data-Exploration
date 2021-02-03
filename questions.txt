@@ -1,15 +1,14 @@
-Impact des nutriments sur le nutriscore pour ANOVA => la formule est documentée (sens ?)
+Graphes pour analyse monovariée ?
+Shapiro ok ? Autres tests ?
+Nutriments suivent pas loi normale
+C'est assez niveau contenu ?
+Scorer un modèle de prédictions statistique avec résultats binaires
 
-todo:
-Matrice de correlation bivariée avant ACP
-=> vérifier la normalisation des données avant ANOVA
+
 Justifier:
   Les démarches de nettoyage
   Les méthodes d'analyse
   Les types de graphes
-Conditions:
-  1 graphe intéractif
-  3 types de graphes
 
 envisager:
 Chi-2 ?
@@ -20,5 +19,3 @@ corrélation entre les éléments sains et les hautes teneurs en X par portion (
 
 docs:
 https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html
-https://plotly.com/python/
-https://colab.research.google.com/notebooks/intro.ipynb#recent=true
