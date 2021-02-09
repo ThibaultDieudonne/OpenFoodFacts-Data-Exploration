@@ -1,5 +1,6 @@
+Y a t il un moyen de faire une ANOVA avec une axe d'inertie d'ACP ?
 Comment ajuster l'écart-type positif et négatif avec le skew ? => Racine des écarts quadratiques à la moyenne des valeurs supérieures et inférieures ?
-Terminologie en fonction des coefficients (0.4 = faiblement corrélé ? par exemple)
+Terminologie en fonction des coefficients (0.4 = faiblement corrélé ? par exemple) => Quels exemples inclure ?
 Demander les interprétations à partir d'exemples
 
 Justifier + Titrer:
@@ -8,6 +9,7 @@ Justifier + Titrer:
   Les types de graphes
 
 Définitions:
+  Eta²: ?
   skewness: symétrie
   kurtosis: aplatissement
   Gini: répartition d'une variable dans la population
