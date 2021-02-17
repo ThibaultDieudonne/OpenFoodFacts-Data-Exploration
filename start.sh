@@ -1,4 +1,2 @@
-cd venv
-. activate
-cd ..
+source venv/Scripts/activate
 jupyter notebook notebook.ipynb

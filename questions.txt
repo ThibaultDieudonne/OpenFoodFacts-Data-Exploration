@@ -1,18 +1,12 @@
-Y a t il un moyen de faire une ANOVA avec une axe d'inertie d'ACP ?
-Comment ajuster l'écart-type positif et négatif avec le skew ? => Racine des écarts quadratiques à la moyenne des valeurs supérieures et inférieures ?
-Terminologie en fonction des coefficients (0.4 = faiblement corrélé ? par exemple) => Quels exemples inclure ?
-Demander les interprétations à partir d'exemples
-
-Justifier + Titrer:
-  Les démarches de nettoyage
-  Les méthodes d'analyse
-  Les types de graphes
+Toute petite ACP pour montrer la corrélation entre énergie et nutriments non redondants ?
+Quelle est la phrase pour interpréter l'ANOVA ?
+On ne peut pas vraiment dire que les données suivent une distribution normale. Terminologie ?
 
 Définitions:
-  Eta²: ?
+  Regression linéaire: R² coefficient de détermination = SCE (somme des carrés expliqués, relatif au moedl global) / SCT (somme des carrés totale)
+  Eta²: Vinterclasse/Vtotale => rapport de corrélation
   skewness: symétrie
   kurtosis: aplatissement
   Gini: répartition d'une variable dans la population
 
-Docs:
-  https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html
+interprétation ACP: la réduction permet de retrouver fiablement des données par combinaison linéaire.
