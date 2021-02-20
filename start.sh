@@ -1,2 +1,1 @@
-source venv/Scripts/activate
-jupyter notebook notebook.ipynb
+jupyter notebook P3_03_notebook.ipynb

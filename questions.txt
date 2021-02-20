@@ -1,6 +1,4 @@
-Toute petite ACP pour montrer la corrélation entre énergie et nutriments non redondants ?
-Quelle est la phrase pour interpréter l'ANOVA ?
-On ne peut pas vraiment dire que les données suivent une distribution normale. Terminologie ?
+Quelle est la phrase pour interpréter l'ANOVA ? => parler de dépendance entre le nutrigrade et l'énergie
 
 Définitions:
   Regression linéaire: R² coefficient de détermination = SCE (somme des carrés expliqués, relatif au moedl global) / SCT (somme des carrés totale)
@@ -10,3 +8,8 @@ Définitions:
   Gini: répartition d'une variable dans la population
 
 interprétation ACP: la réduction permet de retrouver fiablement des données par combinaison linéaire.
+
+Fortunately, an anova is not very sensitive to moderate deviations from normality; simulation studies, using a variety of non-normal distributions,
+have shown that the false positive rate is not affected very much by this violation of the assumption (Glass et al. 1972, Harwell et al. 1992, Lix et al. 1996).
+This is because when you take a large number of random samples from a population, the means of those samples are approximately normally distributed even when the population is not normal.
+=> Les distributions ne sont pas archaiques
