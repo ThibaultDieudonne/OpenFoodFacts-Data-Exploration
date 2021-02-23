@@ -1,0 +1,75 @@
+1) -
+
+2) Santé publique France: agence nationale réalisant des dossiers et enquête dans le domaine de la santé (sens large)
+   Open Food Fact: base de donnée de produit européens, aux données plus ou moins propres, contenant un grand nombre d'information sur chaque produit.
+   (Du fabriquant, à la matière de l'emballage en passant par les données nutritionnelles).
+   L'objectif de ce projet est de réaliser une analyse exploratoire de ces données
+
+3) -
+
+4) a) On ne garde que les éléments dont les valeurs nutritionnelles sont renseignée (+ de la moitié des données)
+   b) On remplace les valeurs aberrantes avec la méthode de l'interquartile
+   c) On exclu les colonnes comportant trop de données manquantes (+50%)
+   d) En pratique, on vérifie simplement que les doublons ont bien été éliminés
+
+5) -
+
+6) #SUCCINT
+
+7) ACPs sur différents ensembles de nutriments.
+   Affichage d'une matrice de corrélation bivariée (graph de type heat map)
+   Affichage de l'éboulis des valeurs propres sous la forme d'un histogramme
+   Affichage du cercle des corrélation pour les axes d'inertie principaux F1 et F2.
+   Autant de composantes que de variables.
+   Les objectifs sont de trouver des modes communs entre les variables et de découvrir les éventuelles variables redondantes.
+
+8) 1ere ACP avec toutes les variables nutritionnelles (nutriments et vitamines)
+   #Décrire les corrélations
+   Montrer que certaines variables sont déjà redondantes
+
+9) A partir du 10e axe d'inertie on inclu 90% des données, ce qui confirme que l'on peut réduire le nombre de variables de cet ensemble.
+   Le cercle des corrélations (F1 et F2) est peu lisible, mais on peut déjà voir que certaines variables sont confondues, comme les taux de glucides et de sucres.
+   Bien qu'il faille quand même relativiser étant donné que ces axes ne captent qu'un tiers des données
+
+10) ACP sur un nombre réduit de variable: on a exclu les vitamines
+    Il faut 7 axes d'inertie pour inclure 90% des données.
+    Le cercle des corrélations est plus lisible et capte 43% des données.
+    Sodium & sel corrélés positivement à F2, glucides et sucres négativement donc le mode commun de F2 serait la saveur (c'est à dire sucré/salé)
+    Les graisses et l'énergie sont corrélés positivement à F1, donc le mode commun serait la richesse de l'aliment.
+
+11) ACP minimaliste en conservant uniquement les nutriments fondamentaux non redondants (lipides, glucides, protéines et sodium).
+    Uniquement une faible corrélation entre lipides et glucides.
+    Impossible de réduire les données.
+    => Il s'agit exactement des informations minimum légales en France
+
+12) On calcule eta², le rapport de corrélation entre une variable qualitative et quantitative.
+    L'ANOVA a pour hypothèse fondamentale que les données suivent une distribution normale.
+    Cependant, aucune variable du dataset ne respecte ce critère. Heureusement, l'ANOVA est peu sensible au déviations modérée de la loi normale.
+    En plus, le taux de faux positifs est peu affecté par le non respect de cette hypothèse, surtout dans la mesure ou les données ne sont pas archaiques (Glass 1972, Harwell 1992, Lix 1996).
+    Dans le cas présent, les distributions sont semblables à des compositions de lois normales et à des lois normales tronquées, donc l'ANOVA devrait rester relativement fiable.
+
+13) #hypothèses
+    => moyennement corrélé
+    => Le nutrigrade dépend de plusieurs données donc l'énergie contribue de manière importante au nutriscore.
+
+14-15) Idem, mais normalité des données plus discutable donc résultats peu signficatifs.
+
+16)
+
+17) Gros volume de données exploitables [expliquer] mais données françaises de mauvaise qualité [expliquer]
+
+
+Modifications:
+
+Modification du traitement des valeurs abbérantes: Je supprime d'abord les valeurs impossibles par définition (taux pour 100g > 100g par exemple), puis je supprime les valeurs abbérantes.
+
+Ajout d'un traitement des doublons, devenu nécessaire avec le nouveau nettoyage des données.
+
+Analyse bivariée:
+  - Relation entre nutriscore français et anglais.
+  - Data d'ajout des produits (time series)
+  - Catégories contenant le plus haut taux de chaque nutriment (graphe intéractif)
+
+Visualisation des données de l'ANOVA sous la forme de boxplot
+
+Traitement des valeurs manquantes: Il n'existe pas de méthode simple et efficace permettant de prédire des données fiables pour l'analyse. Le remplacement par la moyenne par exemple, aurait pour effet de réduire l'écart-type et par conséquent nuirait à la qualité de l'analyse.
